@@ -1,0 +1,126 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsl(179, 47%, 52%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+
+    --border-radius: 0.5em;
+    --padding: 20px 40px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--light-gray);
+    font-family: Karla, sans-serif;
+    font-size: 16px;
+}
+
+/*-----------------------------------------------------------*/
+.component__join-community {
+    background-color: white;
+    border-radius: var(--border-radius);
+}
+
+.component__join-community-header1 {
+    color: var(--cyan)
+}
+
+.component__join-community-header2 {
+    color: var(--bright-yellow)
+}
+
+.component__join-community-text {
+    color: var(--grayish-blue);
+    line-height: 1.5;
+}
+
+/*-----------------------------------------------------------*/
+.component__monthy-subscription {
+    background-color: var(--cyan);
+    color: var(--light-gray)
+}
+
+.component__monthy-subscription-header {
+    color: white;
+}
+
+.component__monthy-subscription-btn {
+    width: 100%;
+    line-height: 3;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--bright-yellow);
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.component__monthy-subscription-price {
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+}
+
+.component__monthy-subscription-price-value {
+    font-size: 2rem;
+}
+
+/*---------------------------------------------------------------*/
+.component__why-us {
+    color: var(--light-gray);
+    background-color: var(--light-cyan);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.component__why-us-header {
+    color: white;
+}
+
+.component__why-us-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+/*-----------------------------------------------------------*/
+.component__join-community,
+.component__monthy-subscription,
+.component__why-us {
+    padding: var(--padding);
+}
+
+@media (min-width: 376px) {
+    .component {
+        position: absolute;
+        max-width: 600px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .component__monthy-subscription,
+    .component__why-us {
+        flex: 1;
+    }
+
+    .component__monthy-subscription {
+        border-bottom-left-radius: var(--border-radius);
+    }
+
+    .component__why-us {
+        border-radius: 0;
+        border-bottom-right-radius: var(--border-radius);
+    }
+}
